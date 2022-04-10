@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TIme.css">
+    <title>UI CLock</title>
+</head>
+<body>
+    
+    <div id="clock">
+        <h2>Digital Clock</h2>
+        <div id="time">
+            <div><span id="hour">00</span></div>
+            <div><span id="Minutes">00</span></div>
+            <div><span id="Seconds">00</span></div>
+      
+        </div>
+        <button onclick="Start()">Start</button>
+        <button onclick="Stop()">Stop</button>
+       
+    </div>
+</body>
+<script>
+   function clock(){
+       let hours=document.getElementById("hour");
+       let Minutes=document.getElementById("Minutes");
+       let Seconds=document.getElementById("Seconds");
+
+       var h=new Date().getHours();
+       var M=new Date().getMinutes();
+       var S=new Date().getSeconds();
+       var d=new Date().getFullYear()
+   
+          hours.innerHTML=h;
+          Minutes.innerHTML=M;
+          Seconds.innerHTML=S;
+          console.log(d)
+    }
+    let sto;
+
+     let Start=()=>{
+         sto= setInterval(clock,1000);
+     }
+
+
+let Stop=()=>{
+    clearInterval(sto)
+}
+    
+
+</script>
+</html>

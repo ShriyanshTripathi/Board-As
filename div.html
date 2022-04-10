@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="div.css">
+  <title>Doccc</title>
+</head>
+
+<body id="body">
+
+  <div class="ath">
+    <div id="parent">
+    <h2 id="Heading"> Ready for the quotes</h2>
+    <div class="chi">
+     
+        <p id="para">Hii Guys</p>
+        <button type="submit" id="btn">New Quote</button>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+<script>
+
+
+   let parent=document.querySelector("#parent")
+  let para = document.querySelector("#para");
+  let btn = document.querySelector("#btn");
+  btn.addEventListener("click", Funo);
+  let chi = document.querySelector(".chi");
+  let Heading = document.querySelector("#Heading")
+  function Funo(e) {
+    //  we take variable color ="#" ,because of hexa color code we need  6 more number to generate hexa color code
+
+    let color = "#";
+
+    // Math.random() return the random number which is fluctuate b/w 0 to 1 example like 0.7293311039620642,....
+    //  and we add color+=random, bcz we get like #0.26593620618431046 but we need only for hexa color
+
+    // color+=Math.random()
+
+    // but we nedd only hexadecimal number then we use toString(16) then we get #0.06a779b675c57 but we nedd only #90cd83 thne we 
+    // use slice method slice(2,8) that means hum 2 se le kar 8 tak yani jo number padega for example90cd83,....like this
+    // we get then we add  var color=# becz ewe need for color code # in starting  
+
+    color += Math.random().toString(16).slice(2, 8)
+    console.log(color);
+    // for cahnging paragraph text collor ewe use para.style.color= color
+    para.style.color = color;
+    
+   
+    
+    //  for chanchin the butoon color
+      btn.style.backgroundColor=color;
+
+      //this for changin parent div color
+      parent.style.backgroundColor=color
+
+
+    // time base  for get the current time we use the new Date() method
+    let CurrentDate = new Date()    //(yy,MM,D,H)
+    // now we use getHours() method to get current hours in 1 to 24
+    CurrentDate = CurrentDate.getHours()
+    console.log(CurrentDate);
+
+    if (CurrentDate >= 1 && CurrentDate < 12) {
+      // console.log("goodMorning")
+      Heading.innerHTML = `good  Morning with quotes${CurrentDate}`
+    } else if (CurrentDate >= 12 && CurrentDate < 19) {
+      // console.log("GoodAfternoon")
+      Heading.innerHTML = `good  Afternoon with quotes ${CurrentDate}`
+    } else {
+      Heading.innerHTML = `good  night with quotes${CurrentDate}`
+      console.log("GoodNight")
+
+
+    }
+    let rnum = ar[Math.floor(Math.random() * ar.length)]
+  console.log(rnum)
+  para.textContent=rnum
+            
+
+
+
+
+  }
+  let ar = [`“Remember, no one is stopping you from lighting a lamp in a dark night.” – Harivansh Rai Bacchan`,
+    `“What we possess is temporary, but what we become is permanent.” – Devdutt Pattanaik`,
+    `“If you live on the river, befriend the crocodile.” – Indian prov`,
+    `“What is now in the past was once in the future.” – Ramachandra Guha`,
+    `“A coward is incapable of exhibiting love; it is the prerogative of the brave.” – Mahatma Gandhi`,
+
+
+    `“Even an emperor is no match for a man with no wants.” – Maharishi Raman`,
+
+
+    `“They who give have all things; they who withhold have nothing.” – Indian proverb`,
+
+    `“Facts are facts and will not disappear on account of your likes.” – Jawaharlal Nehru`,
+
+    `“I will not let anyone walk through my mind with their dirty feet.” – Mahatma Gandhi`,
+
+    `"Man is subject to all kinds of hardships and misfortune" - Chandrasekharendra Saraswati`,
+
+
+    "Nature leads to a variety :Golu",
+    ` "Let our advance worrying become advance thinking and planning." ~Winston Churchill`,
+    `"Plans are worthless. Planning is essential." ~Dwight D.Eisenhower`,
+    `"A good plan today is better than a perfect plan tomorrow." ~Proverb`,
+    
+  ]
+
+
+</script>
+
+</html>

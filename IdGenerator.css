@@ -1,0 +1,79 @@
+body{
+    font:20px Hevetica,Arial;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+ 
+}
+.black{
+    margin-left: 5%;
+}
+
+
+form { padding: ;
+   width: 30%;
+   height: 25%;
+    float: left;
+    
+ }
+.container{
+    width: 30%;
+    
+    color: #000;
+    float: right;
+}
+input{
+    display: table;
+    margin-bottom: 1em;
+    width: 60%;
+    font-size: 14px;
+    border: 2px solid #159;
+    border-radius: 5px;
+       padding: 3px;
+} 
+
+
+#file{
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+} 
+.upload, button{
+ color: #fff;
+ background-color: #159;
+ border: 2 px solid #159;
+border-radius: 5px;
+cursor: pointer; 
+}  
+
+header{
+    width:100%;
+    border-radius: 12px 12px 0px 0px;
+    
+} 
+/*  
+.content{
+    width: 30%;
+    height: 20;
+}
+  */
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
+
+@media only screen and (max-width:768px) {
+    .container,form{
+        width: 90%;
+        margin-left: 5%;
+    }
+    #result{
+        margin-left: 0%;
+    }
+}
